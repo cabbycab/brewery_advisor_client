@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import HomeContent from "./components/HomeContent/HomeContent";
-import SelectionPage from "./pages/SelectionPage";
+import SelectionPage from "./pages/SelectionPage/SelectionPage";
 
 // Hooks
 import { useState, useEffect } from "react";
