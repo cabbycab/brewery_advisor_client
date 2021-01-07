@@ -5,11 +5,22 @@ import HomeContent from "./components/HomeContent/HomeContent";
 
 // Hooks
 import {useState, useEffect} from 'react'
+import {Route, Switch, Redirect} from 'react-router-dom'
 
 
 // Functions, Components and Pages
 import {fetchProjectData} from './services/RailsApi'
 
+
+
+
+function NotFound(){
+  return(
+  <div>
+    <h1>404 not found</h1>
+  </div>
+  )
+}
 
 
 function App() {
@@ -29,10 +40,19 @@ function App() {
     getData()
   }, [])
 
+
   return (
     <div className="App">
       <Header />
       <p>Check out local breweries in the following cities.</p>
+      
+      <Switch>
+        
+        
+        
+        <Route component={NotFound}/>
+      </Switch>
+      
       <Footer />
     </div>
   );
