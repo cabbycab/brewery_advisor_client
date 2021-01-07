@@ -13,6 +13,22 @@ import {fetchProjectData} from './services/RailsApi'
 
 
 function App() {
+
+  const [locationData, setLocationData] = useState([{
+    city: '',
+    state: '',
+    breweries: []
+  }])
+
+  async function getData(){
+    const data = await fetchProjectData()
+    setLocationData(data)
+  }
+
+  useEffect(()=>{
+    getData()
+  }, [])
+
   return (
     <div className="App">
       <Header />
