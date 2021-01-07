@@ -1,7 +1,7 @@
 function HomeContent(props) {
     return (
       <header>
-        <h1>HomeContent</h1>
+        <h1>{props.locations.city}</h1>
       </header>
     );
 }
