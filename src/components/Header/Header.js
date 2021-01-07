@@ -2,7 +2,7 @@ import "./Header.css";
 
 function Header(props) {
     return (
-      <header>
+      <header className="Header">
         <h1>BreweryAdvisor</h1>
       </header>
     );
