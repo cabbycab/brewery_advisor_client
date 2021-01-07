@@ -1,4 +1,7 @@
 import './App.css';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import HomeContent from "./components/HomeContent/HomeContent";
 
 // Hooks
 import {useState, useEffect} from 'react'
@@ -12,8 +15,9 @@ import {fetchProjectData} from './services/RailsApi'
 function App() {
   return (
     <div className="App">
-      <h1>BreweryAdvisor</h1>
+      <Header />
       <p>Check out local breweries in the following cities.</p>
+      <Footer />
     </div>
   );
 }
