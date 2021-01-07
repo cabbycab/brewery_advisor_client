@@ -4,8 +4,7 @@ function SelectionPage(props) {
   return (
     <div>
      <div>
-      {/* <h1>Breweries in {(props[0].city, props[0].state)}</h1> */}
-        <h1>{props.locationData.name}</h1>
+        {props.locationData.map((brewery, idx)=><h1>{brewery.name}</h1>)}
     </div>
     </div>
   );
