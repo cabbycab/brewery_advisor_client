@@ -1,0 +1,11 @@
+import React from "react";
+
+function SelectionPage(props) {
+  return (
+    <div>
+      <h1>Breweries in {(props[0].city, props[0].state)}</h1>
+    </div>
+  );
+}
+
+export default SelectionPage;
