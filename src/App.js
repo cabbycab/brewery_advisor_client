@@ -1,10 +1,39 @@
 import './App.css';
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import HomeContent from "./components/HomeContent/HomeContent";
+
+// Hooks
+import {useState, useEffect} from 'react'
+
+
+// Functions, Components and Pages
+import {fetchProjectData} from './services/RailsApi'
+
+
 
 function App() {
+
+  const [locationData, setLocationData] = useState([{
+    city: '',
+    state: '',
+    breweries: []
+  }])
+
+  async function getData(){
+    const data = await fetchProjectData()
+    setLocationData(data)
+  }
+
+  useEffect(()=>{
+    getData()
+  }, [])
+
   return (
     <div className="App">
-      <h1>BreweryAdvisor</h1>
+      <Header />
       <p>Check out local breweries in the following cities.</p>
+      <Footer />
     </div>
   );
 }
