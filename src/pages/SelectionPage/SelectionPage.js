@@ -6,7 +6,7 @@ function SelectionPage(props) {
   return (
     <div>
       <h1>
-        Breweries in {(props.locationData[0].city, props.locationData[0].state)}
+        Breweries in {props.locationData[0].city}, {props.locationData[0].state}
       </h1>
     </div>
   );
