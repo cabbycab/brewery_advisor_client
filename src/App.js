@@ -49,15 +49,15 @@ function App() {
           render={(props) => (
             <div>
               {locationData.map((locations, idx) => (
-                <HomeContent key={idx} locations={locations} />
+                <HomeContent key={idx} id={idx} locations={locations} />
               ))}
             </div>
           )}
         />
         <Route
           exact
-          path="/breweries"
-          render={(props) => <SelectionPage locationData={locationData} />}
+          path="/breweries/:id"
+          render={(props) => <SelectionPage locationData={locationData[props.match.params.id].breweries} />}
         />
 
         <Route component={NotFound} />
