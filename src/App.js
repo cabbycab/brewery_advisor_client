@@ -1,5 +1,14 @@
 import './App.css';
 
+// Hooks
+import {useState, useEffect} from 'react'
+
+
+// Functions, Components and Pages
+import {fetchProjectData} from './services/RailsApi'
+
+
+
 function App() {
   return (
     <div className="App">
