@@ -47,7 +47,13 @@ function App() {
       <p>Check out local breweries in the following cities.</p>
       
       <Switch>
-        
+        <Route exact path='/' render={props =>
+        <div>
+          {locationData.map((locations, idx)=>(
+            <HomeContent key={idx} locations={locations} />
+          ))}
+        </div>
+        }/>
         
         
         <Route component={NotFound}/>
