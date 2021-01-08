@@ -7,7 +7,6 @@ function HomeContent(props) {
       <h1>{props.locations.city}</h1>
       <Link to={`/breweries/${props.id}`}>See Breweries</Link> <br />
       <br />
-      <br />
     </div>
   );
 }
