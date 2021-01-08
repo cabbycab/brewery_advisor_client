@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 
 function HomeContent(props) {
     return (
+      <main>
       <div>
 
         <header>
@@ -11,6 +12,7 @@ function HomeContent(props) {
         </header>
 
       </div>
+      </main>
     );
 }
 
