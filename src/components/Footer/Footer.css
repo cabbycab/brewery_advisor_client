@@ -1,12 +1,13 @@
 .Footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    background-color: #a39445;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 18px 18px 0 0;
-    box-shadow: 1px 1px 20px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-image: url("/Users/daniellekoski/Documents/Class/brewery_advisor/brewery_advisor_client/src/images/wooden.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 1px 1px 20px 1px black;
 }

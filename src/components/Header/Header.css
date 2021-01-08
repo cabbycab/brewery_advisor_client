@@ -1,20 +1,26 @@
 .Header {
-    background-color: #a39445;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-weight: bold;
-    color: white;
-    font-size: 20px;
-    border-radius: 0 0 18px 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    box-shadow: 1px 1px 20px 1px black;
+  background-image: url("/Users/daniellekoski/Documents/Class/brewery_advisor/brewery_advisor_client/src/images/wooden.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: 1px 1px 20px 1px black;
 }
 
 .Header a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+.Header a:hover {
+  text-shadow: 1px 1px 5px grey;
 }
