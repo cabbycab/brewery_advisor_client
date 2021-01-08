@@ -6,11 +6,11 @@ function Card(props) {
   const key = props.key;
 
   return (
-    <div className="Card__base">
+    <div className="Card__base" key={key}>
       <h1>{brewery.name}</h1>
       <p>{brewery.description}</p>
       <p>{brewery.address}</p>
-      <a href={brewery.website} target="_blank">
+      <a href={brewery.website} target="_blank" rel="noreferrer noopener">
         {brewery.website}
       </a>
     </div>
