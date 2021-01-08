@@ -10,6 +10,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 // Functions, Components and Pages
 import { fetchProjectData } from "./services/RailsApi";
+import NewBreweryPage from "./pages/NewBreweryPage/NewBreweryPage";
 
 function NotFound() {
   return (
@@ -40,8 +41,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <p>Check out local breweries in the following cities.</p>
-
+      
       <Switch>
         <Route
           exact
@@ -60,6 +60,11 @@ function App() {
           render={(props) => <SelectionPage locationData={locationData[props.match.params.id].breweries} />}
         />
 
+        <Route
+        exact
+        path="/newbrewery"
+        render={props => <NewBreweryPage locationData={locationData} setLocationData={setLocationData} {...props} />}
+        />
         <Route component={NotFound} />
       </Switch>
 
