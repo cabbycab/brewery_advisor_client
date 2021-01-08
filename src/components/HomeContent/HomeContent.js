@@ -1,19 +1,13 @@
-import {Link} from 'react-router-dom'
-
+import { Link } from "react-router-dom";
+import "./HomeContent.css";
 
 function HomeContent(props) {
-    return (
-      <main>
-      <div>
-
-        <header>
-         <h1>{props.locations.city}</h1>
-         <Link to={`/breweries/${props.id}`}>See Breweries</Link>
-        </header>
-
-      </div>
-      </main>
-    );
+  return (
+    <div id="city">
+      <h1>{props.locations.city}</h1>
+      <Link to={`/breweries/${props.id}`}>See Breweries</Link>
+    </div>
+  );
 }
 
 export default HomeContent;
