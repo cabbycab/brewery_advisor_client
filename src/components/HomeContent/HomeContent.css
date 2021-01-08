@@ -10,7 +10,8 @@ h1 {
   text-shadow: 1px 1px 5px black;
 }
 
-#city {
+#city,
+h3 {
   text-align: center;
   justify-content: center;
 }

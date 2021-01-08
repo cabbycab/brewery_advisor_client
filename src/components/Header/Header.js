@@ -6,8 +6,8 @@ function Header(props) {
     <header className="Header">
       <Link to="/">
         <h1>BreweryAdvisor</h1>
-        <Link to="/newbrewery">Add a New Brewery</Link>
       </Link>
+      <Link to="/newbrewery">Add a New Brewery</Link>
     </header>
   );
 }
