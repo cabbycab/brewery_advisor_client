@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "../../components/Card/Card";
 
 function SelectionPage(props) {
   return (
@@ -6,14 +7,7 @@ function SelectionPage(props) {
       <div>
         <div>
           {props.locationData.map((brewery, idx) => (
-            <div>
-              <h1>{brewery.name}</h1>
-              <p>{brewery.description}</p>
-              <p>{brewery.address}</p>
-              <a href={brewery.website} target="_blank">
-                {brewery.website}
-              </a>
-            </div>
+            <Card brewery={brewery} key={idx} />
           ))}
         </div>
       </div>
