@@ -1,0 +1,9 @@
+.Card__base {
+  box-sizing: border-box;
+  /* border: 2px solid red; */
+  width: 250px;
+  margin: 0 10px 10px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}

@@ -1,0 +1,10 @@
+.Card__container {
+  /* border: 2px solid blue; */
+}
+
+.Card__holder {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
