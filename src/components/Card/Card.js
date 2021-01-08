@@ -1,11 +1,12 @@
 import React from "react";
+import "./Card.css";
 
 function Card(props) {
   const brewery = props.brewery;
   const key = props.key;
 
   return (
-    <div>
+    <div className="Card__base">
       <h1>{brewery.name}</h1>
       <p>{brewery.description}</p>
       <p>{brewery.address}</p>
