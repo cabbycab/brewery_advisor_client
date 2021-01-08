@@ -70,6 +70,7 @@ function App() {
           render={(props) => (
             <NewBreweryPage
               locationData={locationData[props.match.params.id].breweries}
+              id={locationData}
               setLocationData={setLocationData}
             />
           )}
