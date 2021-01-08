@@ -41,7 +41,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-
+      <h3>Check out local breweries in the following cities:</h3>
       <Switch>
         <Route
           exact
@@ -66,12 +66,12 @@ function App() {
 
         <Route
           exact
-          path="/newbrewery/:id"
+          path="/newbrewery"
           render={(props) => (
             <NewBreweryPage
-              locationData={locationData[props.match.params.id].breweries}
-              id={locationData}
-              setLocationData={setLocationData}
+            // locationData={locationData[props.match.params.id].breweries}
+            // id={locationData}
+            // setLocationData={setLocationData}
             />
           )}
         />
