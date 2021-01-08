@@ -62,8 +62,8 @@ function App() {
 
         <Route
         exact
-        path="/newbrewery"
-        render={props => <NewBreweryPage locationData={locationData} setLocationData={setLocationData} {...props} />}
+        path="/newbrewery/:id"
+        render={(props) => <NewBreweryPage locationData={locationData[props.match.params.id].breweries} setLocationData={setLocationData} />}
         />
         <Route component={NotFound} />
       </Switch>
