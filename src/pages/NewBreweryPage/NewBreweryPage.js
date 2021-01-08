@@ -8,7 +8,7 @@ const NewBreweryPage = (props) => {
       description: "",
       address: "",
       website: "",
-      location_id: "",
+      location_id: 0,
     },
   ]);
 
@@ -20,6 +20,7 @@ const NewBreweryPage = (props) => {
   }
 
   async function handleSubmit(e) {
+    e.preventDefault();
     try {
       await handleAddData(formState);
     } catch (e) {
@@ -73,8 +74,10 @@ const NewBreweryPage = (props) => {
             placeholder="location id"
             value={formState.location_id}
             name="location_id"
+            onChange={handleChange}
           ></input>
           {/* value/location=props.id something like that here */}
+          <button>Add Brewery</button>
         </fieldset>
       </form>
     </div>
