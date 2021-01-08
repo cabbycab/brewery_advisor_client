@@ -25,7 +25,7 @@
 
 ## Click here to explore our app
 
-#### [Brewery Advisor](https://google.com/)
+<a href="https://google.com/" target="_blank">Brewery Advisor</a>
 
 ## Future Updates
 
