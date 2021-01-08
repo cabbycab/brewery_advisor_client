@@ -9,13 +9,6 @@ const NewBreweryPage = (props) => {
       address: "",
       website: "",
       location_id: "",
-      location: [
-        {
-          id: `${props.id}`,
-          city: "",
-          state: "",
-        },
-      ],
     },
   ]);
 
@@ -77,8 +70,8 @@ const NewBreweryPage = (props) => {
           ></input>
           <input
             type="text"
-            placeholder={props.id}
-            value={props.id}
+            placeholder="location id"
+            value={formState.location_id}
             name="location_id"
           ></input>
           {/* value/location=props.id something like that here */}
