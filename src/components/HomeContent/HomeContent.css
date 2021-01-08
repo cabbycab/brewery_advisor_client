@@ -1,13 +1,21 @@
 a {
   text-decoration: none;
   color: white;
+  text-shadow: 1px 1px 5px black;
 }
 
 h1 {
   color: white;
+  margin: 5px;
+  text-shadow: 1px 1px 5px black;
 }
 
-#city {
+#city,
+h3 {
   text-align: center;
   justify-content: center;
+}
+
+h3 {
+  color: white;
 }

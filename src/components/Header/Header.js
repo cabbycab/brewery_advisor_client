@@ -5,8 +5,11 @@ function Header(props) {
   return (
     <header className="Header">
       <Link to="/">
-        <h1>BreweryAdvisor</h1>
+        <h1>
+          <i className="fas fa-beer"></i>BreweryAdvisor
+        </h1>
       </Link>
+      <Link to="/newbrewery">Add a New Brewery</Link>
     </header>
   );
 }
