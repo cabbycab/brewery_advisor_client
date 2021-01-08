@@ -41,13 +41,13 @@ function App() {
   return (
     <div className="App">
       <Header />
-      
+
       <Switch>
         <Route
           exact
           path="/"
           render={(props) => (
-            <div>
+            <div id="home-content">
               {locationData.map((locations, idx) => (
                 <HomeContent key={idx} id={idx} locations={locations} />
               ))}
@@ -57,13 +57,22 @@ function App() {
         <Route
           exact
           path="/breweries/:id"
-          render={(props) => <SelectionPage locationData={locationData[props.match.params.id].breweries} />}
+          render={(props) => (
+            <SelectionPage
+              locationData={locationData[props.match.params.id].breweries}
+            />
+          )}
         />
 
         <Route
-        exact
-        path="/newbrewery/:id"
-        render={(props) => <NewBreweryPage locationData={locationData[props.match.params.id].breweries} setLocationData={setLocationData} />}
+          exact
+          path="/newbrewery/:id"
+          render={(props) => (
+            <NewBreweryPage
+              locationData={locationData[props.match.params.id].breweries}
+              setLocationData={setLocationData}
+            />
+          )}
         />
         <Route component={NotFound} />
       </Switch>
