@@ -37,7 +37,10 @@ const NewBreweryPage = (props) => {
             <h1 key={idx}>{brewery.name}</h1>
           ))}
         </div> */}
-
+        <h3>Location id's:</h3>
+        <h3>Austin: 1</h3>
+        <h3>NYC: 2</h3>
+        <h3>San Diego: 3</h3>
         <form onSubmit={handleSubmit}>
           <fieldset>
             <legend>Add a new Brewery</legend>
@@ -70,7 +73,9 @@ const NewBreweryPage = (props) => {
               onChange={handleChange}
             ></input>
             <input
-              type="text"
+              type="number"
+              min="1"
+              max="3"
               placeholder="location id"
               value={formState.location_id}
               name="location_id"
