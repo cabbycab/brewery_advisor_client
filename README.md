@@ -2,7 +2,7 @@
 
 ## Your Go to App for Breweries in your area
 
-#### Currently supporting breweries in Austin,Tx, New York,NY and San Diego, CA.
+#### Currently supporting breweries in Austin,TX, New York,NY and San Diego,CA.
 
 #### More to come soon!
 
