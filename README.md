@@ -15,7 +15,15 @@
 
 ## Wireframes
 
-### Initial mockup
+### Initial mockups
+
+#### Home Page
+
+![](src/images/hp_wireframe.png)
+
+#### Selection Page
+
+![](src/images/sp_wireframe.png)
 
 ### Final Product
 
