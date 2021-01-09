@@ -8,7 +8,11 @@ function SelectionPage(props) {
       <div className="Card__container">
         <div className="Card__holder">
           {props.locationData.map((brewery, idx) => (
-            <Card brewery={brewery} key={idx} />
+            <Card
+              brewery={brewery}
+              key={idx}
+              deleteBrewery={props.deleteBrewery}
+            />
           ))}
         </div>
       </div>

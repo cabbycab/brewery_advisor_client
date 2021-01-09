@@ -13,6 +13,7 @@ function Card(props) {
       <a href={brewery.website} target="_blank" rel="noreferrer noopener">
         {brewery.website}
       </a>
+      <button onClick={() => props.deleteBrewery(brewery)}>X</button>
     </div>
   );
 }

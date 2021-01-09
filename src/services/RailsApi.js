@@ -15,3 +15,13 @@ export function handleAddData(brewery) {
     },
   }).then((res) => res.json());
 }
+
+export function handleDelete(deletedBrewery) {
+  return fetch(BASE_URL + `breweries/${deletedBrewery.id}`, {
+    method: "DELETE",
+    headers: {
+      Accept: "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+    },
+  });
+}
