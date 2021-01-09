@@ -10,6 +10,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 // Functions, Components and Pages
 import { fetchProjectData } from "./services/RailsApi";
+import { handleDelete } from "./services/RailsApi";
 import NewBreweryPage from "./pages/NewBreweryPage/NewBreweryPage";
 
 function NotFound() {
@@ -38,6 +39,14 @@ function App() {
     getData();
   }, []);
 
+  async function deleteBrewery() {
+    await handleDelete()
+      .then(() => {
+        getData();
+      })
+      .catch((error) => console.log(error));
+  }
+
   return (
     <div className="App">
       <Header />
@@ -60,6 +69,8 @@ function App() {
           render={(props) => (
             <SelectionPage
               locationData={locationData[props.match.params.id].breweries}
+              deleteBrewery={handleDelete}
+              // deleteBrewery={deletedBrewery}
             />
           )}
         />
