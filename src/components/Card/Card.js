@@ -13,19 +13,29 @@ function Card(props) {
   }
 
   const brewery = props.brewery;
-  const key = props.key;
+  // const key = props.key;
+
+  function handleTheUpdate(event, brewery) {
+    props.updateBrewery(event, brewery);
+    toggleForm();
+  }
 
   return (
     <>
       {editFormVisible ? (
         <>
           <div className="Card__base">
-            <EditForm brewery={brewery} />
+            <EditForm
+              brewery={props.brewery}
+              // updateBrewery={props.updateBrewery}
+              // updateBrewery={handleTheUpdate}
+              handleSubmit={handleTheUpdate}
+            />
             <button onClick={toggleForm}>Cancel</button>
           </div>
         </>
       ) : (
-        <div className="Card__base" key={key}>
+        <div className="Card__base">
           <h1>{brewery.name}</h1>
           <p>{brewery.description}</p>
           <p>{brewery.address}</p>

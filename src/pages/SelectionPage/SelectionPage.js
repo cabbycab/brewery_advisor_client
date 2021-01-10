@@ -10,8 +10,9 @@ function SelectionPage(props) {
           {props.locationData.map((brewery, idx) => (
             <Card
               brewery={brewery}
-              key={idx}
+              key={brewery.id}
               deleteBrewery={props.deleteBrewery}
+              updateBrewery={props.updateBrewery}
             />
           ))}
         </div>

@@ -27,7 +27,7 @@ export function handleDelete(deletedBrewery) {
 }
 
 export function handleUpdate(event, brewery) {
-  event.preventdefault();
+  //   event.preventdefault();
   return fetch(BASE_URL + `breweries/${brewery.id}`, {
     body: JSON.stringify(brewery),
     method: "PUT",

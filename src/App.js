@@ -11,6 +11,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // Functions, Components and Pages
 import { fetchProjectData } from "./services/RailsApi";
 import { handleDelete } from "./services/RailsApi";
+import { handleUpdate } from "./services/RailsApi";
 import NewBreweryPage from "./pages/NewBreweryPage/NewBreweryPage";
 
 function NotFound() {
@@ -70,6 +71,7 @@ function App() {
             <SelectionPage
               locationData={locationData[props.match.params.id].breweries}
               deleteBrewery={handleDelete}
+              updateBrewery={handleUpdate}
               // deleteBrewery={deletedBrewery}
             />
           )}
