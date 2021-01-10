@@ -1,12 +1,14 @@
 .Footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45px;
-    background-color: #3e9f3d;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 18px 18px 0 0;
-    box-shadow: 1px 1px 20px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("https://i.imgur.com/uYMvXTX.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 1px 1px 20px 1px black;
 }

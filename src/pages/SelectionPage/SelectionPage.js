@@ -1,11 +1,23 @@
 import React from "react";
+import Card from "../../components/Card/Card";
+import "./SelectionPage.css";
 
 function SelectionPage(props) {
   return (
-    <div>
-      {/* <h1>Breweries in {(props[0].city, props[0].state)}</h1> */}
-        {/* <h1>{props.locationData.name}</h1> */}
-    </div>
+    <main>
+      <div className="Card__container">
+        <div className="Card__holder">
+          {props.locationData.map((brewery, idx) => (
+            <Card
+              brewery={brewery}
+              key={brewery.id}
+              deleteBrewery={props.deleteBrewery}
+              updateBrewery={props.updateBrewery}
+            />
+          ))}
+        </div>
+      </div>
+    </main>
   );
 }
 

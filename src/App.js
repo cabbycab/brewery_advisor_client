@@ -10,6 +10,9 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 // Functions, Components and Pages
 import { fetchProjectData } from "./services/RailsApi";
+import { handleDelete } from "./services/RailsApi";
+import { handleUpdate } from "./services/RailsApi";
+import NewBreweryPage from "./pages/NewBreweryPage/NewBreweryPage";
 
 function NotFound() {
   return (
@@ -37,17 +40,24 @@ function App() {
     getData();
   }, []);
 
+  async function deleteBrewery() {
+    await handleDelete()
+      .then(() => {
+        getData();
+      })
+      .catch((error) => console.log(error));
+  }
+
   return (
     <div className="App">
       <Header />
-      <p>Check out local breweries in the following cities.</p>
-
+      <h3>Check out local breweries in the following cities:</h3>
       <Switch>
         <Route
           exact
           path="/"
           render={(props) => (
-            <div>
+            <div id="home-content">
               {locationData.map((locations, idx) => (
                 <HomeContent key={idx} id={idx} locations={locations} />
               ))}
@@ -57,9 +67,27 @@ function App() {
         <Route
           exact
           path="/breweries/:id"
-          render={(props) => <SelectionPage locationData={locationData[props.match.params.id].breweries} />}
+          render={(props) => (
+            <SelectionPage
+              locationData={locationData[props.match.params.id].breweries}
+              deleteBrewery={handleDelete}
+              updateBrewery={handleUpdate}
+              // deleteBrewery={deletedBrewery}
+            />
+          )}
         />
 
+        <Route
+          exact
+          path="/newbrewery"
+          render={(props) => (
+            <NewBreweryPage
+            // locationData={locationData[props.match.params.id].breweries}
+            // id={locationData}
+            // setLocationData={setLocationData}
+            />
+          )}
+        />
         <Route component={NotFound} />
       </Switch>
 
