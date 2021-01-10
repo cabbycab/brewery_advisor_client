@@ -38,9 +38,6 @@ const EditForm = (props) => {
 
   return (
     <div>
-      <h1>
-        <em>Edit form works, just reload after youve done it</em>
-      </h1>
       <form onSubmit={handleUpdateBrewery}>
         <legend>Edit the following</legend>
         <input
