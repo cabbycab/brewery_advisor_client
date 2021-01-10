@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 
 const EditForm = (props) => {
-  //   const [editformState, setEditFormState] = useState({
-  //     name: `${props.brewery.name}`,
-  //     description: `${props.brewery.description}`,
-  //     address: `${props.brewery.address}`,
-  //     website: `${props.brewery.website}`,
-  //     location_id: `${props.brewery.location_id}`,
-  //   });
   const [editformState, setEditFormState] = useState({
     name: "",
     description: "",
@@ -46,7 +39,7 @@ const EditForm = (props) => {
   return (
     <div>
       <h1>
-        <em>edit form doesnt work yet</em>
+        <em>Edit form works, just reload after youve done it</em>
       </h1>
       <form onSubmit={handleUpdateBrewery}>
         <legend>Edit the following</legend>
