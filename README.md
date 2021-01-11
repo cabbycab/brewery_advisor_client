@@ -4,8 +4,6 @@
 
 #### Currently supporting breweries in Austin, TX, New York, NY and San Diego, CA.
 
-#### More to come soon!
-
 ## Technologies Used
 
 - Javascript
