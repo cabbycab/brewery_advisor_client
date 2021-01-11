@@ -77,7 +77,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <h3>Check out local breweries in the following cities:</h3>
       <Switch>
         <Route
           exact
