@@ -31,7 +31,9 @@ function Card(props) {
               // updateBrewery={handleTheUpdate}
               handleSubmit={handleTheUpdate}
             />
-            <button onClick={toggleForm}>Cancel</button>
+            <div>
+              <button onClick={toggleForm}>Cancel</button>
+            </div>
           </div>
         </>
       ) : (

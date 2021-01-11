@@ -88,7 +88,9 @@ const NewBreweryPage = (props) => {
               required
             ></input>
             {/* value/location=props.id something like that here */}
-            <button>Add Brewery</button>
+            <div id="add-btn">
+              <button>Add Brewery</button>
+            </div>
           </form>
         </div>
       </div>
