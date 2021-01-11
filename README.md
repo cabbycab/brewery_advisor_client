@@ -14,6 +14,7 @@
 - HTML5
 - React Router
 - Ruby on Rails API
+- Font Awesome
 - Git
 
 ## Wireframes
