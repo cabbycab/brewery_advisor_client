@@ -23,7 +23,6 @@ function NotFound() {
 
 function App() {
   const BASE_URL = "https://brewery-advisor-api.herokuapp.com/";
-  // const BASE_URL = "http://localhost:3000/";
 
   const [locationData, setLocationData] = useState([
     {
@@ -58,7 +57,6 @@ function App() {
   }
 
   function handleUpdate(event, brewery) {
-    //   event.preventdefault();
     return fetch(BASE_URL + `breweries/${brewery.id}`, {
       body: JSON.stringify(brewery),
       method: "PUT",
