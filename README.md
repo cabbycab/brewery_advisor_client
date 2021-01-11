@@ -47,10 +47,11 @@
 
 ![](src/images/city.png)
 
-## Click here to explore our app
+## Click here to explore our app:
 
-<a href="https://google.com/" target="_blank">Brewery Advisor</a>
+<a href="https://brewery-advisor-app.herokuapp.com/" target="_blank">Brewery Advisor</a>
 
 ## Future Updates
 
-#### More breweries to view soon
+- Add Authentication
+- Add more cities
