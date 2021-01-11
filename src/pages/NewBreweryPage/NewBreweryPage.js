@@ -19,10 +19,10 @@ const NewBreweryPage = (props) => {
   }
 
   async function handleSubmit(e) {
-    // e.preventDefault();
+    e.preventDefault();
     console.log(formState);
     try {
-      await handleAddData(formState);
+      await handleAddData(formState).then(() => props.getData());
     } catch (e) {
       console.log(handleAddData);
     }
@@ -31,13 +31,6 @@ const NewBreweryPage = (props) => {
   return (
     <main>
       <div>
-        {/* <div>
-          Hi There, this is the form for adding breweries to the clicked cities
-          list.
-          {props.locationData.map((brewery, idx) => (
-            <h1 key={idx}>{brewery.name}</h1>
-          ))}
-        </div> */}
         <h3>Location ID's:</h3>
         <p>
           Austin: 1 <br />
@@ -87,7 +80,6 @@ const NewBreweryPage = (props) => {
               onChange={handleChange}
               required
             ></input>
-            {/* value/location=props.id something like that here */}
             <div id="add-btn">
               <button>Add Brewery</button>
             </div>
