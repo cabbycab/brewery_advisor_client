@@ -1,6 +1,5 @@
 .Card__base {
   box-sizing: border-box;
-  /* border: 2px solid red; */
   width: 300px;
   margin: 0 20px 20px 0;
   padding: 15px;
@@ -14,8 +13,6 @@
 }
 
 .Card__base > a {
-  /* color: green; */
-  /* max-width: 50%; */
   white-space: pre-wrap; /* CSS3 */
   white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
   white-space: -pre-wrap; /* Opera 4-6 */
