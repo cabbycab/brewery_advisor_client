@@ -102,7 +102,7 @@ function App() {
         <Route
           exact
           path="/newbrewery"
-          render={(props) => <NewBreweryPage />}
+          render={(props) => <NewBreweryPage getData={getData} />}
         />
         <Route component={NotFound} />
       </Switch>
