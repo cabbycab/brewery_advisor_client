@@ -86,7 +86,8 @@ const EditForm = (props) => {
         />
         <input
           type="submit"
-          value={props.brewery ? "update this brewery" : "nothing to update"}
+          className="update-btn"
+          value={props.brewery ? "Update Brewery" : "nothing to update"}
         />
       </form>
     </div>
