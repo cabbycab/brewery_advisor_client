@@ -53,6 +53,7 @@ const NewBreweryPage = (props) => {
               name="name"
               value={formState.name}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
@@ -60,6 +61,7 @@ const NewBreweryPage = (props) => {
               name="description"
               value={formState.description}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
@@ -67,6 +69,7 @@ const NewBreweryPage = (props) => {
               name="address"
               value={formState.address}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
@@ -74,6 +77,7 @@ const NewBreweryPage = (props) => {
               name="website"
               value={formState.website}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
@@ -81,6 +85,7 @@ const NewBreweryPage = (props) => {
               value={formState.location_id}
               name="location_id"
               onChange={handleChange}
+              required
             ></input>
             {/* value/location=props.id something like that here */}
             <button>Add Brewery</button>
