@@ -31,7 +31,7 @@ function Header(props) {
     <header className="Header" id="brewHeader">
       <Link to="/" className="home-link">
         <h1>
-          <i className="fas fa-beer"></i>BreweryAdvisor
+          <i className="fas fa-beer"> </i> BreweryAdvisor
         </h1>
       </Link>
       <Link to="/newbrewery">Add a New Brewery</Link>

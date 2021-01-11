@@ -1,40 +1,60 @@
 # Brewery Advisor
 
-## Your Go to App for Breweries in your area
+Your Go to App for Breweries in your area
 
-#### Currently supporting breweries in Austin,TX, New York,NY and San Diego,CA.
-
-#### More to come soon!
+Currently supporting breweries in Austin, TX, New York, NY and San Diego, CA.
 
 ## Technologies Used
 
 - Javascript
 - ReactJS
 - CSS3
+- HTML5
+- React Router
+- Ruby on Rails API
+- Font Awesome
 - Git
+
+## Approach Taken
+
+- We collaborated on an idea, used a Trello Board to divide tasks and an Invsion board to develop a wireframe and ERD. We spent some time figuring out how to collaborate on Git and GitHub before moving forward on anything.
+
+### Responsibilities
+
+We divided up the tasks as such:
+
+- Product Manager and Back-End Lead - Danielle Koski
+- Front-End Lead - Jared Long
+- Release Manager - Seven Hong
+
+Although these roles were initially defined, we collaborated and were involved in each part.
 
 ## Wireframes
 
-### Initial mockups
+Initial mock ups
 
-#### Home Page
-
+Home Page
 ![](src/images/hp_wireframe.png)
 
-#### Selection Page
-
+Selection Page
 ![](src/images/sp_wireframe.png)
 
-### Final Product
+## Final Product
 
-#### Choose a city for a list of local breweries
+Home Page
+![](src/images/home.png)
 
-#### Add breweries here
+Add Brewery Page
+![](src/images/add.png)
 
-## Click here to explore our app
+Selection Page
+![](src/images/city.png)
 
-<a href="https://google.com/" target="_blank">Brewery Advisor</a>
+## Click here to explore our app:
+
+<a href="https://brewery-advisor-app.herokuapp.com/" target="_blank">Brewery Advisor</a>
 
 ## Future Updates
 
-#### More breweries to view soon
+- Add Authentication
+- Add more cities

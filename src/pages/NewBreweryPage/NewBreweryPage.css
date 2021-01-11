@@ -20,6 +20,11 @@ button {
   font-size: 15px;
 }
 
+#add-btn {
+  display: flex;
+  justify-content: center;
+}
+
 button:hover {
   background-color: #dee2e6;
 }
