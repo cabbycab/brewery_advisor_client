@@ -27,7 +27,7 @@ We divided up the tasks as such:
 - Front-End Lead - Jared Long
 - Release Manager - Seven Hong
 
-Although these roles we defined, we collaborated and were involved in each part.
+Although these roles were initially defined, we collaborated and were involved in each part.
 
 ## Wireframes
 
