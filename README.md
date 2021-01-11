@@ -2,7 +2,7 @@
 
 ## Your Go to App for Breweries in your area
 
-#### Currently supporting breweries in Austin,TX, New York,NY and San Diego,CA.
+#### Currently supporting breweries in Austin, TX, New York, NY and San Diego, CA.
 
 #### More to come soon!
 
@@ -19,21 +19,33 @@
 
 ## Wireframes
 
-### Initial mockups
+#### Initial mock ups
 
-#### Home Page
+### Home Page
 
 ![](src/images/hp_wireframe.png)
 
-#### Selection Page
+### Selection Page
 
 ![](src/images/sp_wireframe.png)
 
 ### Final Product
 
-#### Choose a city for a list of local breweries
+### Home Page
 
-#### Add breweries here
+##### Choose a city for a list of local breweries
+
+![](src/images/home.png)
+
+### Add Brewery Page
+
+##### Add breweries here
+
+![](src/images/add.png)
+
+### Selection Page
+
+![](src/images/city.png)
 
 ## Click here to explore our app
 
