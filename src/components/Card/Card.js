@@ -3,8 +3,6 @@ import { useState } from "react";
 import "./Card.css";
 import EditForm from "../EditForm/EditForm";
 
-// TODO set up form state for the editform and pass that state as props to the editform and bring in the update function (similar to the newBreweryPage form)
-
 function Card(props) {
   const [editFormVisible, setEditFormVisible] = useState(false);
 
@@ -13,7 +11,6 @@ function Card(props) {
   }
 
   const brewery = props.brewery;
-  // const key = props.key;
 
   function handleTheUpdate(event, brewery) {
     props.updateBrewery(event, brewery);
@@ -25,12 +22,7 @@ function Card(props) {
       {editFormVisible ? (
         <>
           <div className="Card__base">
-            <EditForm
-              brewery={props.brewery}
-              // updateBrewery={props.updateBrewery}
-              // updateBrewery={handleTheUpdate}
-              handleSubmit={handleTheUpdate}
-            />
+            <EditForm brewery={props.brewery} handleSubmit={handleTheUpdate} />
             <div>
               <button onClick={toggleForm}>Cancel</button>
             </div>

@@ -31,8 +31,6 @@ const EditForm = (props) => {
   }
 
   function handleUpdateBrewery(event) {
-    // console.log(brewery);
-    // event.preventDefault();
     if (props.brewery) editformState.id = props.brewery.id;
     props.handleSubmit(event, editformState);
   }
