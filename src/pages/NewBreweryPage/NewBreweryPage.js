@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { handleAddData } from "../../services/RailsApi";
+import "./NewBreweryPage.css";
 
 const NewBreweryPage = (props) => {
   const [formState, setFormState] = useState({
@@ -37,49 +38,54 @@ const NewBreweryPage = (props) => {
             <h1 key={idx}>{brewery.name}</h1>
           ))}
         </div> */}
-
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Add a new Brewery</legend>
+        <h3>Location ID's:</h3>
+        <p>
+          Austin: 1 <br />
+          New York City: 2 <br />
+          San Diego: 3
+        </p>
+        <div id="form-div">
+          <form onSubmit={handleSubmit} className="new_form">
+            <legend className="legend">Add a New Brewery</legend>
             <input
               type="text"
-              placeholder="name"
+              placeholder="Name"
               name="name"
               value={formState.name}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="description"
+              placeholder="Description"
               name="description"
               value={formState.description}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="address"
+              placeholder="Address"
               name="address"
               value={formState.address}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="website"
+              placeholder="Website"
               name="website"
               value={formState.website}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="location id"
+              placeholder="Location ID"
               value={formState.location_id}
               name="location_id"
               onChange={handleChange}
             ></input>
             {/* value/location=props.id something like that here */}
             <button>Add Brewery</button>
-          </fieldset>
-        </form>
+          </form>
+        </div>
       </div>
     </main>
   );

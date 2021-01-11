@@ -19,3 +19,7 @@ h3 {
 h3 {
   color: white;
 }
+
+a:hover {
+  text-shadow: 1px 1px 5px grey;
+}

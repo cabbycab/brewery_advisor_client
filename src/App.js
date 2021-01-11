@@ -1,3 +1,6 @@
+// Functions, Components and Pages
+import { fetchProjectData } from "./services/RailsApi";
+import NewBreweryPage from "./pages/NewBreweryPage/NewBreweryPage";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -6,21 +9,22 @@ import SelectionPage from "./pages/SelectionPage/SelectionPage";
 
 // Hooks
 import { useState, useEffect } from "react";
-import { Route, Switch, Redirect } from "react-router-dom";
-
-// Functions, Components and Pages
-import { fetchProjectData } from "./services/RailsApi";
-import NewBreweryPage from "./pages/NewBreweryPage/NewBreweryPage";
+import { Route, Switch } from "react-router-dom";
 
 function NotFound() {
   return (
-    <div>
-      <h1>404 not found</h1>
-    </div>
+    <main>
+      <div>
+        <h1>404 not found</h1>
+      </div>
+    </main>
   );
 }
 
 function App() {
+  const BASE_URL = "https://brewery-advisor-api.herokuapp.com/";
+  // const BASE_URL = "http://localhost:3000/";
+
   const [locationData, setLocationData] = useState([
     {
       city: "",
@@ -29,14 +33,46 @@ function App() {
     },
   ]);
 
+  useEffect(() => {
+    getData();
+  }, []);
+
   async function getData() {
     const data = await fetchProjectData();
     setLocationData(data);
   }
 
-  useEffect(() => {
-    getData();
-  }, []);
+  function handleDelete(deletedBrewery) {
+    return fetch(BASE_URL + `breweries/${deletedBrewery.id}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    })
+      .then(() => {
+        // re-using this function to update the state again
+        getData();
+      })
+      .catch((error) => console.log(error));
+  }
+
+  function handleUpdate(event, brewery) {
+    //   event.preventdefault();
+    return fetch(BASE_URL + `breweries/${brewery.id}`, {
+      body: JSON.stringify(brewery),
+      method: "PUT",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+    })
+      .then(() => {
+        // re-using this function to update the state again
+        getData();
+      })
+      .catch((error) => console.log(error));
+  }
 
   return (
     <div className="App">
@@ -60,6 +96,8 @@ function App() {
           render={(props) => (
             <SelectionPage
               locationData={locationData[props.match.params.id].breweries}
+              deleteBrewery={handleDelete}
+              updateBrewery={handleUpdate}
             />
           )}
         />
@@ -67,13 +105,7 @@ function App() {
         <Route
           exact
           path="/newbrewery"
-          render={(props) => (
-            <NewBreweryPage
-            // locationData={locationData[props.match.params.id].breweries}
-            // id={locationData}
-            // setLocationData={setLocationData}
-            />
-          )}
+          render={(props) => <NewBreweryPage />}
         />
         <Route component={NotFound} />
       </Switch>
