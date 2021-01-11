@@ -15,6 +15,20 @@
 - Font Awesome
 - Git
 
+## Approach Taken
+
+- We collaborated on an idea, used a Trello Board to divide tasks and Invsion to develope a wireframe and ERD. We spent some time figuring out how to collaborate on Git and GitHub before moving forward on anything.
+
+### Responsibilities
+
+We divied up the tasks as such:
+
+- Product Manager and Back-End Lead - Danielle Koski
+- Front-End Lead - Jared Long
+- Release Manager - Seven Hong
+
+#### Although these roles we defined, we collaborated and were involved in each part.
+
 ## Wireframes
 
 #### Initial mock ups
