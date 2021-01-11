@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./EditForm.css";
 
 const EditForm = (props) => {
   const [editformState, setEditFormState] = useState({
@@ -48,7 +49,8 @@ const EditForm = (props) => {
           value={editformState.name}
           id="name"
         />
-        <input
+        <textarea
+          className="description-box"
           onChange={handleChange}
           name="description"
           placeholder={editformState.description}
@@ -56,7 +58,8 @@ const EditForm = (props) => {
           value={editformState.description}
           id="description"
         />
-        <input
+        <textarea
+          className="address-site"
           onChange={handleChange}
           name="address"
           placeholder={editformState.address}
@@ -64,7 +67,8 @@ const EditForm = (props) => {
           value={editformState.address}
           id="address"
         />
-        <input
+        <textarea
+          className="address-site"
           onChange={handleChange}
           name="website"
           placeholder={editformState.wesbite}
