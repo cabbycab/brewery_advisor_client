@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { handleAddData } from "../../services/RailsApi";
+import "./NewBreweryPage.css";
 
 const NewBreweryPage = (props) => {
   const [formState, setFormState] = useState({
@@ -38,36 +39,36 @@ const NewBreweryPage = (props) => {
           ))}
         </div> */}
         <h3>Location id's:</h3>
-        <h3>Austin: 1</h3>
-        <h3>NYC: 2</h3>
-        <h3>San Diego: 3</h3>
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Add a new Brewery</legend>
+        <p>Austin: 1</p>
+        <p>New York City: 2</p>
+        <p>San Diego: 3</p>
+        <div id="form-div">
+          <form onSubmit={handleSubmit} className="new_form">
+            <legend className="legend">Add a New Brewery</legend>
             <input
               type="text"
-              placeholder="name"
+              placeholder="Name"
               name="name"
               value={formState.name}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="description"
+              placeholder="Description"
               name="description"
               value={formState.description}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="address"
+              placeholder="Address"
               name="address"
               value={formState.address}
               onChange={handleChange}
             ></input>
             <input
               type="text"
-              placeholder="website"
+              placeholder="Website"
               name="website"
               value={formState.website}
               onChange={handleChange}
@@ -83,8 +84,8 @@ const NewBreweryPage = (props) => {
             ></input>
             {/* value/location=props.id something like that here */}
             <button>Add Brewery</button>
-          </fieldset>
-        </form>
+          </form>
+        </div>
       </div>
     </main>
   );
