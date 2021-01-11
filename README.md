@@ -11,6 +11,9 @@
 - Javascript
 - ReactJS
 - CSS3
+- HTML5
+- React Router
+- Ruby on Rails API
 - Git
 
 ## Wireframes
