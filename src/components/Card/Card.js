@@ -41,9 +41,12 @@ function Card(props) {
           <p>{brewery.address}</p>
           <a href={brewery.website} target="_blank" rel="noreferrer noopener">
             {brewery.website}
-          </a>
-          <button onClick={() => props.deleteBrewery(brewery)}>X</button>
-          <button onClick={toggleForm}>Edit</button>
+          </a>{" "}
+          <br />
+          <div id="container">
+            <button onClick={() => props.deleteBrewery(brewery)}>Delete</button>
+            <button onClick={toggleForm}>Edit</button>
+          </div>
         </div>
       )}
     </>
