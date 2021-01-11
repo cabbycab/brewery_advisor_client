@@ -23,6 +23,14 @@
   text-shadow: 1px 1px 5px black;
 }
 
-.Header a:hover {
+.Header a:hover,
+.Header a > h1:hover {
   text-shadow: 1px 1px 5px grey;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 98.3%;
+  z-index: 99;
 }

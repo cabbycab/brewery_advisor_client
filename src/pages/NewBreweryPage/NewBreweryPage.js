@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { handleAddData } from "../../services/RailsApi";
+import "./NewBreweryPage.css";
 
 const NewBreweryPage = (props) => {
   const [formState, setFormState] = useState({
@@ -37,54 +38,61 @@ const NewBreweryPage = (props) => {
             <h1 key={idx}>{brewery.name}</h1>
           ))}
         </div> */}
-        <h3>Location id's:</h3>
-        <h3>Austin: 1</h3>
-        <h3>NYC: 2</h3>
-        <h3>San Diego: 3</h3>
-        <form onSubmit={handleSubmit}>
-          <fieldset>
-            <legend>Add a new Brewery</legend>
+        <h3>Location ID's:</h3>
+        <p>
+          Austin: 1 <br />
+          New York City: 2 <br />
+          San Diego: 3
+        </p>
+        <div id="form-div">
+          <form onSubmit={handleSubmit} className="new_form">
+            <legend className="legend">Add a New Brewery</legend>
             <input
               type="text"
-              placeholder="name"
+              placeholder="Name"
               name="name"
               value={formState.name}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
-              placeholder="description"
+              placeholder="Description"
               name="description"
               value={formState.description}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
-              placeholder="address"
+              placeholder="Address"
               name="address"
               value={formState.address}
               onChange={handleChange}
+              required
             ></input>
             <input
               type="text"
-              placeholder="website"
+              placeholder="Website"
               name="website"
               value={formState.website}
               onChange={handleChange}
+              required
             ></input>
             <input
-              type="number"
-              min="1"
-              max="3"
-              placeholder="location id"
+              type="text"
+              placeholder="Location ID"
               value={formState.location_id}
               name="location_id"
               onChange={handleChange}
+              required
             ></input>
             {/* value/location=props.id something like that here */}
-            <button>Add Brewery</button>
-          </fieldset>
-        </form>
+            <div id="add-btn">
+              <button>Add Brewery</button>
+            </div>
+          </form>
+        </div>
       </div>
     </main>
   );
