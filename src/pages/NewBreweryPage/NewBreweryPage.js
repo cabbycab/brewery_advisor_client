@@ -19,9 +19,10 @@ const NewBreweryPage = (props) => {
   }
 
   async function handleSubmit(e) {
+    e.preventDefault();
     console.log(formState);
     try {
-      await handleAddData(formState);
+      await handleAddData(formState).then(() => props.getData());
     } catch (e) {
       console.log(handleAddData);
     }
