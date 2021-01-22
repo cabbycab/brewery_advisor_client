@@ -25,7 +25,7 @@ We divided up the tasks as such:
 
 - Product Manager and Back-End Lead - Danielle Koski
 - Front-End Lead - Jared Long
-- Release Manager - Seven Hong
+- Release Manager - Steven Hong
 
 Although these roles were initially defined, we collaborated and were involved in each part.
 
